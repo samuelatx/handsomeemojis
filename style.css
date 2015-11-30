@@ -1,0 +1,107 @@
+@font-face {
+    font-family: MetaSerif_Book;
+    src: url(fonts/MetaSerif_Book.ttf);
+}
+
+@font-face {
+  font-family: "Avenir";
+  src: url("fonts/Avenir.ttc");
+}
+
+* {
+	margin: 0;
+	padding: 0;
+}
+
+body {
+	font-family: MetaSerif_Book;
+}
+
+a {
+	font-family: Avenir;
+	text-transform: uppercase;
+	font-size: 13px; 
+	letter-spacing: 2px;
+	color: #5b5b5b;
+	text-decoration: none;
+}
+
+#wrapper {
+	width: 920px;
+	margin-right: auto;
+	margin-left: auto;
+	text-align: center; 
+}
+
+footer {
+	background-color: #282828;
+	color: white;
+	padding-top: 100px;
+	padding-bottom: 100px;
+}
+
+#footerinner {
+	width: 920px;
+	margin-right: auto;
+	margin-left: auto;
+}
+
+#footerinner > h2 {
+	font-size: 30px;
+}
+
+#nav {
+	height: 100px;
+	padding-top: 60px;
+	color: white;
+	width: 920px;
+	text-align: left;
+	margin-right: auto;
+	margin-left: auto;
+}
+
+header.main {
+	background-color: #282828;
+	height: 600px;
+	text-align: center;
+	margin-bottom: 200px;
+}
+
+h1 {
+	font-size: 36px;
+	color: #4a4a4a;
+	padding-bottom: 10px;
+}
+
+header.main > h1 {
+	color: white; 
+}
+
+header.main > p {
+	color: #8b8b8b; 
+	padding-bottom: 10px;
+}
+
+header.main > img {
+	padding-bottom: 40px;
+}
+
+#cont-1 {
+	border-bottom: 1px solid #eee;
+	margin-bottom: 120px;
+	padding-bottom: 50px;
+}
+
+#cont-2 {
+	border-bottom: none;
+	margin-bottom: 120px;
+}
+
+p {
+	font-size: 18px;
+	color: #848484;
+	padding-bottom: 60px;
+}
+
+
+
