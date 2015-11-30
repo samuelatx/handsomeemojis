@@ -1,3 +1,64 @@
+/* make keyframes that tell the start state and the end state of our object */
+ 
+@-webkit-keyframes fadeIn { from { opacity:0; top: 100px;} to { opacity:1; top: 0px;} }
+@-moz-keyframes fadeIn { from { opacity:0; top: 100px;} to { opacity:1; top: 0px;} }
+@keyframes fadeIn { from { opacity:0; top: 100px;} to { opacity:1; top: 0px;} }
+ 
+.fade-in {
+	opacity:0;  /* make things invisible upon start */
+	-webkit-animation:fadeIn  cubic-bezier(0.215, 0.610, 0.355, 1.000) .8;  /* call our keyframe named fadeIn, use animattion ease-in and repeat it only 1 time */
+	-moz-animation:fadeIn  cubic-bezier(0.215, 0.610, 0.355, 1.000) .8;
+	animation:fadeIn  cubic-bezier(0.215, 0.610, 0.355, 1.000) .8;
+ 
+	-webkit-animation-fill-mode:forwards;  /* this makes sure that after animation is done we remain at the last keyframe value (opacity: 1)*/
+	-moz-animation-fill-mode:forwards;
+	animation-fill-mode:forwards;
+ 
+	-webkit-animation-duration:.8s;
+	-moz-animation-duration:.8s;
+	animation-duration:.8s;
+}
+ 
+.fade-in.one {
+-webkit-animation-delay: .6s;
+-moz-animation-delay: .6s;
+animation-delay: .6s;
+}
+ 
+.fade-in.two {
+-webkit-animation-delay: 1.8s;
+-moz-animation-delay: 1.8s;
+animation-delay: 1.8s;
+}
+ 
+.fade-in.three {
+-webkit-animation-delay: 2.8s;
+-moz-animation-delay: 2.8s;
+animation-delay: 2.8s;
+}
+ 
+/*---make a basic box ---*/
+.box{
+width: 400px;
+height: 50px;
+position: relative;
+margin: 10px;
+text-align: left;
+float: left;
+padding-left: 100px;
+}
+ 
+ 
+
+ 
+
+
+
+
+
+
+
+
 @font-face {
     font-family: MetaSerif_Book;
     src: url(fonts/MetaSerif_Book.ttf);
@@ -82,8 +143,13 @@ header.main > p {
 	padding-bottom: 10px;
 }
 
-header.main > img {
-	padding-bottom: 40px;
+#slackImg {
+	background: url("images/img_SlackHeader.png") no-repeat center top;
+	height: 600px;
+	width: 500px;
+	margin-right: auto;
+	margin-left: auto;
+	padding-top: 100px;
 }
 
 #cont-1 {
