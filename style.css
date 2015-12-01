@@ -1,8 +1,8 @@
 /* make keyframes that tell the start state and the end state of our object */
  
-@-webkit-keyframes fadeIn { from { opacity:0; top: 100px;} to { opacity:1; top: 0px;} }
-@-moz-keyframes fadeIn { from { opacity:0; top: 100px;} to { opacity:1; top: 0px;} }
-@keyframes fadeIn { from { opacity:0; top: 100px;} to { opacity:1; top: 0px;} }
+@-webkit-keyframes fadeIn { from { opacity:0; top: 50px;} to { opacity:1; top: 0px;} }
+@-moz-keyframes fadeIn { from { opacity:0; top: 50px;} to { opacity:1; top: 0px;} }
+@keyframes fadeIn { from { opacity:0; top: 50px;} to { opacity:1; top: 0px;} }
  
 .fade-in {
 	opacity:0;  /* make things invisible upon start */
@@ -20,50 +20,34 @@
 }
  
 .fade-in.one {
--webkit-animation-delay: .6s;
--moz-animation-delay: .6s;
-animation-delay: .6s;
+	-webkit-animation-delay: .6s;
+	-moz-animation-delay: .6s;
+	animation-delay: .6s;
 }
  
 .fade-in.two {
--webkit-animation-delay: 1.8s;
--moz-animation-delay: 1.8s;
-animation-delay: 1.8s;
+	-webkit-animation-delay: 2.4s;
+	-moz-animation-delay: 2.4s;
+	animation-delay: 2.4s;
 }
  
 .fade-in.three {
--webkit-animation-delay: 2.8s;
--moz-animation-delay: 2.8s;
-animation-delay: 2.8s;
+	-webkit-animation-delay: 4s;
+	-moz-animation-delay: 4s;
+	animation-delay: 4s;
 }
  
-/*---make a basic box ---*/
 .box{
-width: 400px;
-height: 50px;
-position: relative;
-margin: 10px;
-text-align: left;
-float: left;
-padding-left: 100px;
+	width: 400px;
+	height: 60px;
+	position: relative;
+	margin: 10px;
+	text-align: left;
+	float: left;
+	padding-left: 120px;
 }
  
  
-
- 
-
-
-
-
-
-
-
-
-@font-face {
-    font-family: MetaSerif_Book;
-    src: url(fonts/MetaSerif_Book.ttf);
-}
-
 @font-face {
   font-family: "Avenir";
   src: url("fonts/Avenir.ttc");
@@ -75,7 +59,14 @@ padding-left: 100px;
 }
 
 body {
-	font-family: MetaSerif_Book;
+	font-family: "ff-meta-serif-web-pro", Times, 'Times New Roman', serif;
+	font-size: 16px;
+	font-weight: normal;
+	  -webkit-font-smoothing: antialiased;
+}
+
+img {
+	border: 0px;
 }
 
 a {
@@ -83,8 +74,28 @@ a {
 	text-transform: uppercase;
 	font-size: 13px; 
 	letter-spacing: 2px;
-	color: #5b5b5b;
+	color: #323232;
 	text-decoration: none;
+}
+
+a.normal {
+	font-family: "ff-meta-serif-web-pro", Times, 'Times New Roman', serif;
+	text-transform: none;
+	font-size: 16px; 
+	letter-spacing: 0;
+	color: #323232;
+	text-decoration: none;
+}
+
+
+a:hover {
+	opacity: 0.6;
+	-o-transition:.5s;
+  -ms-transition:.5s;
+  -moz-transition:.5s;
+  -webkit-transition:.5s;
+  /* ...and now for the proper property */
+  transition:.5s;
 }
 
 #wrapper {
@@ -95,10 +106,10 @@ a {
 }
 
 footer {
-	background-color: #282828;
+	background-color: #212325;
 	color: white;
 	padding-top: 100px;
-	padding-bottom: 100px;
+	height: 200px;
 }
 
 #footerinner {
@@ -108,7 +119,9 @@ footer {
 }
 
 #footerinner > h2 {
-	font-size: 30px;
+	color: white;
+	line-height: 36px;
+	float: left; 
 }
 
 #nav {
@@ -116,22 +129,50 @@ footer {
 	padding-top: 60px;
 	color: white;
 	width: 920px;
-	text-align: left;
 	margin-right: auto;
 	margin-left: auto;
 }
 
+#logo {
+	float: left;
+}
+
+#backtolabs {
+	float: right;
+	padding-top: 5px;
+}
+
+#backtolabs > a {
+	color: white;
+	cursor: pointer;
+}
+
+#backtolabs > a:hover, a img:hover{
+	color: white;
+	opacity: 0.8;
+}
+
+
 header.main {
-	background-color: #282828;
-	height: 600px;
+	height: 580px;
 	text-align: center;
-	margin-bottom: 200px;
+	margin-bottom: 180px;
+	background: #212325 url("images/background.png") no-repeat center bottom;
+	background-size: 651px 358px;
 }
 
 h1 {
-	font-size: 36px;
-	color: #4a4a4a;
+	font-size: 40px;
+	color: #323232;
 	padding-bottom: 10px;
+	font-weight: 500;
+}
+
+h2 {
+	font-size: 30px;
+	color: #323232;
+	padding-bottom: 10px;
+	font-weight: 500;
 }
 
 header.main > h1 {
@@ -140,16 +181,17 @@ header.main > h1 {
 
 header.main > p {
 	color: #8b8b8b; 
-	padding-bottom: 10px;
+	padding-bottom: 20px;
 }
 
 #slackImg {
 	background: url("images/img_SlackHeader.png") no-repeat center top;
+	background-size: 620px 421px;
 	height: 600px;
-	width: 500px;
+	width: 600px;
 	margin-right: auto;
 	margin-left: auto;
-	padding-top: 100px;
+	padding-top: 120px;
 }
 
 #cont-1 {
@@ -164,10 +206,47 @@ header.main > p {
 }
 
 p {
-	font-size: 18px;
-	color: #848484;
+	color: #828282;
 	padding-bottom: 60px;
+	line-height: 22px;
+}
+
+p.normal { 
+	color: #828282;
+	padding-bottom: 0px;
+	line-height: 22px;
+}
+
+p.input {
+	padding-bottom: 0px;
+	border-bottom: 1px solid #333;
+	width: 500px;
+	float: left;
+	margin-left: 50px;
+	margin-top: 14px;
 }
 
 
+input {
+  font-family: "ff-meta-serif-web-pro", Times, 'Times New Roman', serif;
+  border-radius: 0;
+  width: 300px;
+  background: none;
+  border: none;
+  padding: 16px 10px 16px 0;
+  font-size: 16px;
+  color: white;
+}
 
+button.arrow-check-btn {
+  display: inline-block;
+  top: 0.9rem;
+  right: 0;
+  z-index: 20;
+  transition: all 30ms ease;
+  background-color: #222222;
+  border: 1px solid #3a3a3a;
+  width: 30px;
+  height: 30px;
+  overflow: hidden;
+}
