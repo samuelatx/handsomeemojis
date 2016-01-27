@@ -78,6 +78,18 @@ a {
 	text-decoration: none;
 }
 
+a.buttons {
+	font-family: Avenir;
+	text-transform: uppercase;
+	font-size: 13px; 
+	letter-spacing: 2px;
+	color: #323232;
+	text-decoration: none;
+	
+  padding: 10px 30px;
+  border: 1px solid #ccc;
+}
+
 a.normal {
 	font-family: "ff-meta-serif-web-pro", Times, 'Times New Roman', serif;
 	text-transform: none;
@@ -152,6 +164,60 @@ footer {
 	opacity: 0.8;
 }
 
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 50px;
+  padding-top: 50px;
+  background-color: #212325;
+  -webkit-font-smoothing: subpixel-antialiased;
+  -moz-osx-font-smoothing: auto;
+  -webkit-transition: padding 0.1s;
+          transition: padding 0.1s;
+  z-index: 100;
+}
+.header--scrolled {
+  padding-top: 16px;
+}
+.header__content {
+  max-width: 920px;
+  margin: 0 auto;
+}
+@media all and (max-width: 960px) {
+  .header__content {
+    margin: 0 20px;
+  }
+}
+.header__logo {
+  float: left;
+  margin-top: 6px;
+}
+.header__logo:hover {
+  opacity: 0.8;
+}
+.header__logo-image {
+  width: 140px;
+}
+.header__install-link {
+  float: right;
+  padding: 10px 30px;
+  border: 1px solid #494949;
+  background-color: transparent;
+  font-size: 11px;
+  color: #fff;
+  text-decoration: none;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  -webkit-transition: all 0.2s ease;
+          transition: all 0.2s ease;
+}
+.header__install-link:hover {
+  background-color: #fff;
+  color: #000;
+}
+
 
 header.main {
 	height: 580px;
@@ -177,6 +243,7 @@ h2 {
 
 header.main > h1 {
 	color: white; 
+	padding-top: 160px;
 }
 
 header.main > p {
@@ -249,4 +316,37 @@ button.arrow-check-btn {
   width: 30px;
   height: 30px;
   overflow: hidden;
+}
+
+.footer {
+  height: 50px;
+  margin-top: -230px;
+  padding-top: 200px;
+  text-align: center;
+}
+.footer__social {
+  list-style: none;
+}
+.footer__social-item {
+  display: inline;
+  margin: 0 8px;
+}
+.footer__social-link {
+  border: 1px solid transparent;
+  font-size: 11px;
+  color: #5b5b5b;
+  letter-spacing: 3px;
+  text-decoration: none;
+  text-transform: uppercase;
+  -webkit-transition: all 0.2s ease;
+          transition: all 0.2s ease;
+}
+.footer__social-link:hover {
+  border-bottom-color: #a3a3a3;
+}
+.footer__copy {
+  margin-top: 15px;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  font-size: 11px;
+  color: #cdcdcd;
 }
